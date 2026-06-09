@@ -47,4 +47,5 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
 
     Route::get('settings', [SettingController::class, 'index'])->name('settings.index');
     Route::put('settings', [SettingController::class, 'update'])->name('settings.update');
+    Route::get('reports/export/excel',[ReportController::class, 'exportExcel'])->name('reports.export.excel');
 });

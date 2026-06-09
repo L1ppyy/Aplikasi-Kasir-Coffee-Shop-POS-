@@ -31,9 +31,12 @@
       <a href="?date_from={{ now()->startOfMonth()->toDateString() }}&date_to={{ now()->toDateString() }}" class="btn btn-secondary">Bulan Ini</a>
       <a href="?date_from={{ now()->startOfWeek()->toDateString() }}&date_to={{ now()->toDateString() }}" class="btn btn-secondary">Minggu Ini</a>
       <a href="?date_from={{ now()->toDateString() }}&date_to={{ now()->toDateString() }}" class="btn btn-secondary">Hari Ini</a>
+      <a href="{{ route('admin.reports.export.excel', ['date_from' => request('date_from'),'date_to' => request('date_to')]) }}"class="btn btn-success">📊 Export Excel</a>
     </form>
   </div>
 </div>
+
+
 
 <!-- Summary Cards -->
 <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px;">

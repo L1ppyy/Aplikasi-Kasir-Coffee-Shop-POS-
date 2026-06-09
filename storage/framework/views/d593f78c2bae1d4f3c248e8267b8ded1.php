@@ -30,9 +30,12 @@
       <a href="?date_from=<?php echo e(now()->startOfMonth()->toDateString()); ?>&date_to=<?php echo e(now()->toDateString()); ?>" class="btn btn-secondary">Bulan Ini</a>
       <a href="?date_from=<?php echo e(now()->startOfWeek()->toDateString()); ?>&date_to=<?php echo e(now()->toDateString()); ?>" class="btn btn-secondary">Minggu Ini</a>
       <a href="?date_from=<?php echo e(now()->toDateString()); ?>&date_to=<?php echo e(now()->toDateString()); ?>" class="btn btn-secondary">Hari Ini</a>
+      <a href="<?php echo e(route('admin.reports.export.excel', ['date_from' => request('date_from'),'date_to' => request('date_to')])); ?>"class="btn btn-success">📊 Export Excel</a>
     </form>
   </div>
 </div>
+
+
 
 <!-- Summary Cards -->
 <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px;">

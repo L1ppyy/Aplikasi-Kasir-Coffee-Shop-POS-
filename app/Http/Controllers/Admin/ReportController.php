@@ -6,9 +6,27 @@ use App\Http\Controllers\Controller;
 use App\Models\{Transaction, Expense, Product};
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Exports\SalesReportExport;
+use Maatwebsite\Excel\Facades\Excel;
+
 
 class ReportController extends Controller
 {
+
+   public function exportExcel(Request $request)
+{
+    $dateFrom = $request->date_from
+        ?? now()->startOfMonth()->toDateString();
+
+    $dateTo = $request->date_to
+        ?? now()->toDateString();
+
+    return Excel::download(
+        new SalesReportExport($dateFrom, $dateTo),
+        'laporan-omzet.xlsx'
+    );
+}
+
     public function index(Request $request)
     {
         $dateFrom = $request->date_from ?? now()->startOfMonth()->toDateString();

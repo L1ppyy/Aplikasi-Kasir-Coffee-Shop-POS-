@@ -662,7 +662,7 @@
         <div class="preview-container">
             <div class="glass-card">
                 <h2>Kelola Ekosistem Kafemu Dalam Satu Genggaman</h2>
-                <p>Proses transaksi kasir kilat, pencatatan otomatis stok bahan baku produk, serta laporan pendapatan real-time tanpa ribet.</p>
+                <p>Belum jadi ini njir web, msh banyak yg harus diperbaiki dan terlalu basic buat tampilannya, males njir ngerjainnya</p>
                 
                 <div class="mock-stats">
                     <div class="stat-box">
