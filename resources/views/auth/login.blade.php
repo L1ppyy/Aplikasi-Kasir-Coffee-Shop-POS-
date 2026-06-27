@@ -370,7 +370,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Kopi Halaman POS</title>
+    <title>Login - Coffee aL </title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
@@ -655,13 +655,13 @@
 
     <div class="left-side">
         <div class="brand-section">
-            <h1>Kopi<span>Halaman.</span></h1>
+            <h1>Coffee<span>aL.</span></h1>
         </div>
 
         <div class="preview-container">
             <div class="glass-card">
-                <h2>Kelola Ekosistem Kafemu Dalam Satu Genggaman</h2>
-                <p>Belum jadi ini njir web, msh banyak yg harus diperbaiki dan terlalu basic buat tampilannya, males njir ngerjainnya</p>
+                <h2>Alifian Java Script Enthusiast</h2>
+                <p>Belum jadi ini njir web, msh banyak yg harus diperbaiki dan terlalu basic buat tampilannya, males njir ngerjainnya karna pake PHP mending JS</p>
                 
                 <div class="mock-stats">
                     <div class="stat-box">
@@ -677,7 +677,7 @@
         </div>
 
         <div class="left-footer">
-            <p>&copy; 2026 Kopi Halaman POS System. All rights reserved.</p>
+            <p>&copy; 2026 Coffee aL POS System. All rights reserved.</p>
         </div>
     </div>
 

@@ -8,7 +8,7 @@
   <?php echo csrf_field(); ?> <?php echo method_field('PUT'); ?>
 
   <div class="card" style="margin-bottom:20px;">
-    <div class="card-header"><h3>🏪 Informasi Toko</h3></div>
+    <div class="card-header"><h3> Informasi Toko</h3></div>
     <div class="card-body">
       <div class="form-grid">
         <div class="form-group full">

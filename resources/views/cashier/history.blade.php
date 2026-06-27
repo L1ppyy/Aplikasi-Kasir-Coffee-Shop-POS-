@@ -38,7 +38,7 @@ tr:hover td{background:#f8fafc;}
 </head>
 <body>
 <div class="topbar">
-  <span class="topbar-logo">🏪 Riwayat Transaksi</span>
+  <span class="topbar-logo"> Riwayat Transaksi</span>
   <div style="display:flex;gap:8px;">
     <a href="{{ route('cashier.index') }}" class="topbar-btn">← Kembali ke Kasir</a>
   </div>

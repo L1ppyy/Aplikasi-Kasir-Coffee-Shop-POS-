@@ -1,3 +1,4 @@
+
 <?php $__env->startSection('title','Laporan'); ?>
 <?php $__env->startSection('page-title','Laporan Penjualan'); ?>
 <?php $__env->startSection('page-subtitle','Analisis omzet dan performa bisnis'); ?>

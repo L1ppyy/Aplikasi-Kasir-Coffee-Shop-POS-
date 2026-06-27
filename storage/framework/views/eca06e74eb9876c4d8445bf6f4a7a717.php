@@ -164,10 +164,50 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tex
 .toast.success{background:var(--success);}
 .toast.error{background:var(--danger);}
 
-@media print{
-  .pos-topbar,.products-panel,.cart-header,.customer-bar,.cart-items,.cart-footer .discount-row,.payment-section,.receipt-footer-box{display:none!important;}
-  .receipt-overlay{display:flex!important;position:static!important;background:none!important;backdrop-filter:none!important;}
-  .receipt-box{box-shadow:none;max-height:none;}
+@media print {
+  /* 1. Sembunyikan total seluruh elemen bawaan halaman web aplikasi kasir */
+  body * {
+    visibility: hidden;
+  }
+  
+  /* 2. Paksa hanya kotak struk (receipt-box) beserta isinya saja yang terlihat */
+  .receipt-overlay, .receipt-box, .receipt-box * {
+    visibility: visible !important;
+  }
+  
+  /* 3. Atur layout penempatan kotak struk presisi ke pojok kiri atas kertas printer kasir */
+  .receipt-overlay {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    background: none !important;
+    backdrop-filter: none !important;
+    display: flex !important;
+  }
+  
+  .receipt-box {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 80mm !important; /* Standar lebar kertas printer thermal */
+    box-shadow: none !important;
+    max-height: none !important;
+    border-radius: 0 !important;
+    background: #fff !important;
+  }
+
+  /* 4. Sembunyikan tombol 'Cetak' dan 'Transaksi Baru' agar tidak ikut terprint */
+  .receipt-footer-box {
+    display: none !important;
+  }
+
+  /* 5. Bersihkan teks otomatis bawaan browser (seperti URL 127.0.0.1 dan tanggal) */
+  @page {
+    size: auto;
+    margin: 0mm;
+  }
 }
 </style>
 </head>
@@ -598,7 +638,13 @@ function showReceipt(data) {
   document.getElementById('receiptModal').classList.add('open');
 }
 
-function printReceipt() { window.print(); }
+function printReceipt() {
+  // Tarik scroll modal ke posisi paling atas sebelum print dimulai
+  const bodyBox = document.getElementById('receiptBody');
+  if (bodyBox) bodyBox.scrollTop = 0;
+  
+  window.print();
+}
 
 function newTransaction() {
   cart = []; selectedPayment = 'cash';
