@@ -393,7 +393,7 @@
             flex: 1.2;
             position: relative;
             /* Gradasi warna gelap ke moka hangat khas kopi kekinian */
-            background: linear-gradient(135deg, #0f172a 0%, #2e1065 50%, #4c1d95 100%);
+            background:radial-gradient(circle at top right,rgba(212,175,55,.18),transparent 35%),linear-gradient(135deg, #2B1E1A 0%, #4A2C24 45%, #6F4E37 100%);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -415,13 +415,13 @@
 
         .brand-section h1 {
             color: #ffffff;
-            font-size: 32px;
+            font-size: 42px;
             font-weight: 800;
-            letter-spacing: -0.5px;
+            letter-spacing: -1px;
         }
 
         .brand-section h1 span {
-            color: #a78bfa; /* Aksen ungu muda */
+            color:#D4AF37; /* Aksen ungu muda */
         }
 
         /* Preview Elemen Transparan (Glassmorphism) Menggantikan Kotak Fitur Lama */
@@ -432,13 +432,13 @@
         }
 
         .glass-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(12px);
+            background:rgba(255,255,255,.08);
+            backdrop-filter:blur(18px);
             -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 24px;
+            border:1px solid rgba(255,255,255,.15);
+            border-radius: 28px;
             padding: 35px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            box-shadow:0 25px 60px rgba(0,0,0,.35);
         }
 
         .glass-card h2 {
@@ -550,8 +550,8 @@
         .form-control {
             width: 100%;
             padding: 14px 16px 14px 48px;
-            border: 1px solid #e2e8f0;
-            background-color: #fff;
+            border:1px solid #E5D8CB;
+            background:#FCFBF8;
             border-radius: 12px;
             font-size: 14px;
             color: #0f172a;
@@ -561,8 +561,8 @@
         /* Efek glow halus warna ungu saat input diklik */
         .form-control:focus {
             outline: none;
-            border-color: #7c3aed;
-            box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.1);
+            border-color:#8B5E3C;
+            box-shadow:0 0 0 4px rgba(139,94,60,.15);
         }
 
         .form-options {
@@ -591,28 +591,29 @@
         .btn-login {
             width: 100%;
             padding: 14px;
-            background: #7c3aed;
+            background:linear-gradient(90deg,#8B5E3C,#C08A5C);
             color: #ffffff;
             border: none;
-            border-radius: 12px;
+            border-radius: 14px;
             font-size: 15px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.2s ease;
-            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.25);
+            box-shadow:0 12px 30px rgba(139,94,60,.3);
+
         }
 
         .btn-login:hover {
-            background: #6d28d9;
-            transform: translateY(-1px);
+            background:linear-gradient(90deg,#9D6B45,#D39B6A);
+            transform:translateY(-2px);
             box-shadow: 0 6px 20px rgba(124, 58, 237, 0.35);
         }
 
         /* Akun Demo Box yang Lebih Rapi */
         .demo-account-box {
             margin-top: 35px;
-            background-color: #f8fafc;
-            border: 1px dashed #e2e8f0;
+            background:#FFFDF9;
+            border:1px solid #EADCCF;
             border-radius: 12px;
             padding: 16px;
         }
